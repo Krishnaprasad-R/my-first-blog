@@ -11,5 +11,12 @@
             <h2><a href="">Welcome to my blog</a></h2>
             <p>I welcome you all to the blog where I share all the knowledge I gain. This is my reference that I make for the future works that I will do. The posts will be of Machine Learning, Python developement, Django frame work, R programming etc. I hope someone finds my page helpful. I am a beginner to the web development frame works. Later I will improve the page by adding more features.<br><br>Thank you very much for listening to me<br><br> Let me start!!!</p>
         </div>
+{% for post in posts %}
+    <div>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>published: {{ post.published_date }}</p>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
     </body>
 </html>
